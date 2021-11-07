@@ -1,0 +1,6 @@
+framework module Pods_WINFOX {
+  umbrella header "Pods-WINFOX-umbrella.h"
+
+  export *
+  module * { export * }
+}
