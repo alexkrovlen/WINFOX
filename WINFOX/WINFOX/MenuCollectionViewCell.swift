@@ -2,21 +2,23 @@
 //  MenuCollectionViewCell.swift
 //  WINFOX
 //
-//  Created by  Admin on 07.11.2021.
+//  Created by Flash Jessi on 11/8/21.
 //
 
 import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    override init(frame: CGRect) {
-            super.init(frame: frame)
-            setupViews()
-        }
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        func setupViews(){
-            backgroundColor = UIColor.red
-        }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        nameLabel.backgroundColor = .white
+    }
+
 }

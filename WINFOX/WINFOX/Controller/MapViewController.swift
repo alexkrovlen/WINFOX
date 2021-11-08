@@ -143,12 +143,19 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("did select")
-        let collectionView = MenuCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        let tap = UITapGestureRecognizer(target: self, action: #selector(removeCollectionView))
-        self.view.addGestureRecognizer(tap)
-        self.addChild(collectionView)
-        self.view.addSubview(collectionView.view)
+        print(view)
+        print(view.annotation?.title)
+        print(view.annotation?.coordinate)
+        let place = places.filter{ $0.name == view.annotation?.title}
+        if place.count != 0 {
+            let collectionView = MenuCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+            collectionView.place = place
+            let tap = UITapGestureRecognizer(target: self, action: #selector(removeCollectionView))
+            self.view.addGestureRecognizer(tap)
+            self.addChild(collectionView)
+            self.view.addSubview(collectionView.view)
 //        self.didMove(toParent: collectionView)
+        }
     }
     
     @objc func removeCollectionView() {
