@@ -2,7 +2,7 @@
 //  MenuCollectionViewCell.swift
 //  WINFOX
 //
-//  Created by Flash Jessi on 11/8/21.
+//  Created by Svetlana Frolova on 11/8/21.
 //
 
 import UIKit
@@ -15,10 +15,13 @@ class MenuCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var globalView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         nameLabel.backgroundColor = .white
+        globalView.layer.cornerRadius = 12
+        image.layer.cornerRadius = 12
     }
 
 }

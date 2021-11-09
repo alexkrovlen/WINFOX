@@ -2,7 +2,7 @@
 //  MenuCollectionViewController.swift
 //  WINFOX
 //
-//  Created by  Admin on 07.11.2021.
+//  Created by  Svetlana Frolova on 07.11.2021.
 //
 
 import UIKit
@@ -18,7 +18,6 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
         super.viewDidLoad()
         self.collectionView!.register(UINib(nibName: "MenuCollectionViewCell", bundle: nil) , forCellWithReuseIdentifier: reuseIdentifier)
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-            print(111)
             layout.scrollDirection = .vertical
         }
         collectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
@@ -38,11 +37,9 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
                 switch result {
                 case .success(let menu):
                     self?.menu = menu
-                    print(self?.menu)
                     self?.collectionView.reloadData()
                     self?.showData()
                 case .failure:
-                    print("ERROR")
                     self?.menu = []
                     self?.showError()
                 }
@@ -74,7 +71,6 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return menu.count
     }
 

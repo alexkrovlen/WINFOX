@@ -2,7 +2,7 @@
 //  AuthManager.swift
 //  WINFOX
 //
-//  Created by  Admin on 04.11.2021.
+//  Created by  Svetlana Frolova on 04.11.2021.
 //
 
 import Foundation
@@ -37,8 +37,6 @@ class AuthManager {
                 completion(false, "")
                 return
             }
-            print("id")
-            print(self.auth.currentUser?.uid)
             guard let uid = self.auth.currentUser?.uid else {
                 completion(true, "")
                 return

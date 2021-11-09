@@ -2,7 +2,7 @@
 //  CodeViewController.swift
 //  WINFOX
 //
-//  Created by  Admin on 04.11.2021.
+//  Created by  Svetlana Frolova on 04.11.2021.
 //
 
 import UIKit
@@ -12,12 +12,7 @@ class CodeViewController: UIViewController {
     @IBOutlet weak var codeTF: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var timerButton: UIButton!{
-        didSet {
-            timerButton.isEnabled = false
-            timerButton.backgroundColor = .systemGray5
-        }
-    }
+    @IBOutlet weak var timerButton: UIButton!
     
     var timer: Timer = Timer()
     var count: Int = 120
@@ -26,7 +21,6 @@ class CodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundSetting()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,8 +31,9 @@ class CodeViewController: UIViewController {
     
     private func backgroundSetting() {
         sendButton.layer.cornerRadius = 6
-        codeTF.delegate = self
         timerButton.layer.cornerRadius = 6
+        timerButton.isEnabled = false
+        timerButton.backgroundColor = .systemGray5
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         
     }
@@ -81,7 +76,6 @@ class CodeViewController: UIViewController {
     
     @IBAction func tapSendButton(_ sender: UIButton) {
         if let code = codeTF.text, !code.isEmpty {
-            print(code)
             AuthManager.shared.verifyCode(smsCode: code) { [weak self] success, uid in
                 guard success else { return }
                 DispatchQueue.main.async {
@@ -106,10 +100,3 @@ class CodeViewController: UIViewController {
     }
     
 }
-
-extension CodeViewController: UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        <#code#>
-//    }
-}
-

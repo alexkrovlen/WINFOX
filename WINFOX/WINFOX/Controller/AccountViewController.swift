@@ -2,7 +2,7 @@
 //  AccountViewController.swift
 //  WINFOX
 //
-//  Created by  Admin on 05.11.2021.
+//  Created by  Svetlana Frolova on 05.11.2021.
 //
 
 import UIKit

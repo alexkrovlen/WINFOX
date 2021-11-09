@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  WINFOX
 //
-//  Created by Миша on 03.11.2021.
+//  Created by Svetlana Frolova on 03.11.2021.
 //
 
 import UIKit

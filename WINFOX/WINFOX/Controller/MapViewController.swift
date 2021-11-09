@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  WINFOX
 //
-//  Created by  Admin on 05.11.2021.
+//  Created by  Svetlana Frolova on 05.11.2021.
 //
 
 import UIKit
@@ -142,10 +142,6 @@ extension MapViewController:  CLLocationManagerDelegate {
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("did select")
-        print(view)
-        print(view.annotation?.title)
-        print(view.annotation?.coordinate)
         let place = places.filter{ $0.name == view.annotation?.title}
         if place.count != 0 {
             let collectionView = MenuCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
@@ -154,7 +150,6 @@ extension MapViewController: MKMapViewDelegate {
             self.view.addGestureRecognizer(tap)
             self.addChild(collectionView)
             self.view.addSubview(collectionView.view)
-//        self.didMove(toParent: collectionView)
         }
     }
     

@@ -2,7 +2,7 @@
 //  MenuStruct.swift
 //  WINFOX
 //
-//  Created by Flash Jessi on 11/8/21.
+//  Created by Svetlana Frolova on 11/8/21.
 //
 
 import Foundation

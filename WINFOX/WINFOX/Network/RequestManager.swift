@@ -2,7 +2,7 @@
 //  RequestManager.swift
 //  WINFOX
 //
-//  Created by  Admin on 05.11.2021.
+//  Created by  Svetlana Frolova on 05.11.2021.
 //
 
 import Foundation
@@ -50,7 +50,6 @@ class RequestManager {
                     return
                 }
                 for item in json {
-                    print(item)
                     guard
                     let name = item.value(forKey: "name") as? String,
                     let descOptional
@@ -111,10 +110,10 @@ class RequestManager {
                 completion(false)
                 return
             }
-            print("data \(data)")
+            
             do {
                 let jsonObject = try? JSONSerialization.jsonObject(with: data, options: [])
-                print(jsonObject)
+                print(jsonObject ?? "json of check user fail")
             }
         }
         dataTask.resume()
@@ -166,7 +165,7 @@ class RequestManager {
         })
         dataTask.resume()
     }
-//    Result<Data, Error>
+
     public func getImage(image: String, completion: @escaping (UIImage?) -> Void) {
         guard let urlImage = URL(string: image) else {
             completion(UIImage(named: "NoImageFound"))
@@ -215,10 +214,9 @@ class RequestManager {
                 completion(false)
                 return
             }
-            print("data \(data)")
             do {
                 let jsonObject = try? JSONSerialization.jsonObject(with: data, options: [])
-                print(jsonObject)
+                print(jsonObject ?? "json of send coordinate fail")
             }
         }
         dataTask.resume()

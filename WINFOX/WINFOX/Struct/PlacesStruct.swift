@@ -2,7 +2,7 @@
 //  PlacesStruct.swift
 //  WINFOX
 //
-//  Created by  Admin on 06.11.2021.
+//  Created by  Svetlana Frolova on 06.11.2021.
 //
 
 import Foundation

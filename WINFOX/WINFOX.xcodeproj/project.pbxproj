@@ -66,6 +66,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C62BCAE273AA97800DCF5A3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				847D006727345BDD0045BF29 /* AuthManager.swift */,
+				847D00742735A1CC0045BF29 /* RequestManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0C62BCAF273AA99F00DCF5A3 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				847D007627370F050045BF29 /* PlacesStruct.swift */,
+				0C907AA52739B03500011C0C /* MenuStruct.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		0C62BCB0273AA9B200DCF5A3 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				45D8F0E827329A3B009A244F /* AppDelegate.swift */,
+				45D8F0EA27329A3B009A244F /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		0C62BCB1273AA9E300DCF5A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C907AA12739A56100011C0C /* MenuCollectionViewCell.swift */,
+				0C907AA22739A56100011C0C /* MenuCollectionViewCell.xib */,
+				847D0078273824E40045BF29 /* PlaceCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		45D8F0DC27329A3A009A244F = {
 			isa = PBXGroup;
 			children = (
@@ -87,17 +124,11 @@
 		45D8F0E727329A3B009A244F /* WINFOX */ = {
 			isa = PBXGroup;
 			children = (
-				45D8F0E827329A3B009A244F /* AppDelegate.swift */,
-				45D8F0EA27329A3B009A244F /* SceneDelegate.swift */,
+				0C62BCB0273AA9B200DCF5A3 /* Delegate */,
 				847D006D273484280045BF29 /* Controller */,
-				847D006727345BDD0045BF29 /* AuthManager.swift */,
-				847D00742735A1CC0045BF29 /* RequestManager.swift */,
-				847D007C27385E270045BF29 /* MenuCollectionViewController.swift */,
-				0C907AA12739A56100011C0C /* MenuCollectionViewCell.swift */,
-				0C907AA22739A56100011C0C /* MenuCollectionViewCell.xib */,
-				847D007627370F050045BF29 /* PlacesStruct.swift */,
-				0C907AA52739B03500011C0C /* MenuStruct.swift */,
-				847D0078273824E40045BF29 /* PlaceCollectionViewCell.swift */,
+				0C62BCAE273AA97800DCF5A3 /* Network */,
+				0C62BCB1273AA9E300DCF5A3 /* Cell */,
+				0C62BCAF273AA99F00DCF5A3 /* Struct */,
 				45D8F0EE27329A3B009A244F /* Main.storyboard */,
 				45D8F0F127329A40009A244F /* Assets.xcassets */,
 				45D8F0F327329A40009A244F /* LaunchScreen.storyboard */,
@@ -123,6 +154,7 @@
 				847D0069273465B80045BF29 /* CodeViewController.swift */,
 				847D006B273484170045BF29 /* AccountViewController.swift */,
 				847D0070273599700045BF29 /* MapViewController.swift */,
+				847D007C27385E270045BF29 /* MenuCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
